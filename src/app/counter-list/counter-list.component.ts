@@ -9,13 +9,14 @@ import {Counter} from '../counter'
 export class CounterListComponent implements OnInit {
   counters: Counter[];
   name = 'Counter Wall';
-  count = 0;
-
+  constructor() {
+    this.counters = [];
+   }
   create(){
     const counter = new Counter();
     this.counters.push(counter)
   }
-  constructor() { }
+ 
 
   ngOnInit(): void {
   }
