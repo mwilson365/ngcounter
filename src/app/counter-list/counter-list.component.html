@@ -2,11 +2,10 @@
     <h2>{{ name }}</h2>
     <button class="btn btn-primary" (click)="create()">Create</button>
 </div>
-
-<!-- <div>
-    <h4>{{ counter.value }}</h4>
-    <button class="btn btn-primary" (click)="increment">+</button>
-    <button class="btn btn-primary" (click)="decrement">-</button>
-</div> -->
-
-<counter *ngFor="let counter of counters" [counter]="counter"></counter>
+<div class="row">
+    
+<div *ngIf = "superCounters.length > 0">
+        <app-super-counter class="col-5" *ngFor = "let superCounter of superCounters" [counter] ="superCounter"></app-super-counter>
+</div>
+</div>
+<counter *ngFor="let counter of counters" [counter]="counter"></counter>   

@@ -7,14 +7,16 @@ import { Counter } from '../counter';
   styleUrls: ['./counter-detail-component.component.css']
 })
 export class CounterDetailComponentComponent implements OnInit {
-
+  total: number = 0;
   @Input() counter: Counter;
   increment(){
     this.counter.value++;
+    this.total = this.counter.value;
   }
   decrement(){
     if (this.counter.value > 0) {
       this.counter.value--;
+      this.total--;
     }
   }
   constructor() { }
