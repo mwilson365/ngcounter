@@ -9,11 +9,11 @@ import { Counter } from '../counter';
 export class CounterDetailComponentComponent implements OnInit {
   total: number = 0;
   @Input() counter: Counter;
-  increment(){
+  increment() {
     this.counter.value++;
     this.total = this.counter.value;
   }
-  decrement(){
+  decrement() {
     if (this.counter.value > 0) {
       this.counter.value--;
       this.total--;
